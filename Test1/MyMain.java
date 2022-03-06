@@ -11,12 +11,13 @@ public class MyMain {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insert the name of the citizen:");
         String citizenName = scanner.nextLine();
-        System.out.println("Insert citizen ID number:"); // Must be a valid ID number
+        System.out.println("Insert citizen ID number:"); // ID must valid (longer than 9 digits)
         String id = scanner.nextLine();
         String additionalDigit = String.valueOf(id.charAt(id.length()-1));
-        String tempString = id.substring(0,id.indexOf(id.charAt(id.length()-4))) + additionalDigit;
-        String tempString2 = id.substring(id.indexOf(id.charAt(id.length()-4)),(id.length()-1));
-        String newID = tempString + tempString2 + additionalDigit;
+        String theTenth = String.valueOf(id.charAt(id.length()-2));
+        String tempString = id.substring(0,id.indexOf(theTenth)) + additionalDigit;
+        String tempString2 = id.substring(id.indexOf(theTenth));
+        String newID = tempString + tempString2;
 
         System.out.println("Citizen name:"+citizenName+ " New ID:"+newID);  //--- DONE!!!
 
