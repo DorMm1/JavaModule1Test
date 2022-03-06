@@ -11,7 +11,7 @@ public class MyMain {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insert the name of the citizen:");
         String citizenName = scanner.nextLine();
-        System.out.println("Insert citizen ID number:"); // ID must valid (longer than 9 digits)
+        System.out.println("Insert citizen ID number:"); // ID must valid
         String id = scanner.nextLine();
         String additionalDigit = String.valueOf(id.charAt(id.length()-1));
         String theTenth = String.valueOf(id.charAt(id.length()-2));
